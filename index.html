@@ -1,20 +1,90 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Desert Island</title>
 
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+    <body>
+      <header><h1>Desert Island</h1></header>
+      <div id="description-div" class="description">
+        <h2>If you were stranded on a desert island, what five things would
+        <em>you</em> bring?</h2>
+        <h3>Come on in and post photos of your indispensibles!</h3>
+      </div>
+    <nav class="navbar">
+        <button type="button" id="sign-up-button" class="btn btn-default navbar-btn signed-out sign-up">SIGN UP</button>
+        <button type="button" id="sign-in-button" class="btn btn-default navbar-btn signed-out sign-in">SIGN IN</button>
+        <button type="button" id="change-password-button" class="btn btn-default navbar-btn signed-in change-password">CHANGE PASSWORD</button>
+      </nav>
+      <div class="modal fade" id="signUpModal" tabindex="-1" ole="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+            </div>
+            <div class="modal-body">
+              <form id="sign-up-form" class="sign-up">
+                <input name="credentials[email]" type="text" placeholder="email"
+                onfocus="this.placeholder =''"value="">
+                <input name="credentials[password]" type="password"
+                placeholder="password" onfocus="this.placeholder =''"
+                  value="">
+                <input name="credentials[password_confirmation]" type="password"
+                placeholder="confirm password" onfocus="this.placeholder =''"
+                  value="">
+                <input type="Submit" value="Sign Up!">
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="modal fade" id="signInModal" tabindex="-1" ole="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+          </div>
+          <div class="modal-body">
+            <form id="sign-in-form" class="sign-in">
+              <input name="credentials[email]" type="text" placeholder="email"
+              onfocus="this.placeholder =''" value="">
+              <input name="credentials[password]" type="password"
+              placeholder="password" onfocus="this.placeholder =''"
+                value="">
+                <input type="Submit" value="Sign In!">
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" ole="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+          </div>
+          <div class="modal-body">
+            <form id="change-password-form" class="change-password">
+              <input name="passwords[old]" type="password"
+              placeholder="old password" onfocus="this.placeholder =''" value="">
+              <input name="passwords[new]" type="password" placeholder="new password"
+              onfocus="this.placeholder =''" value="">
+              <input type="Submit" value="Change password">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     </body>
 </html>
