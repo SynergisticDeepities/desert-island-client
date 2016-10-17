@@ -1,8 +1,13 @@
 'use strict';
 
-const events = require('./events.js');
+const events = require('./auth/events.js');
+const uploadHandlers = require('./upload/ui.js');
 
 $(document).ready(function(){
+  $('#upload-button').on('click', function() {
+    $('#uploadModal').modal('show');
+  });
+  uploadHandlers.onUploadModalClick();
   $('#sign-out').hide();
   // $('#change-password').hide();
   $('#sign-up-button').on('click', function(){
