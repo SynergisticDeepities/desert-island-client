@@ -12,8 +12,18 @@ const onUploadModalClick = function () {
   });
 };
 
+const onCreateUploadSuccess = function(data) {
+  console.log('In Create Upload Success, data is' , data);
+};
+
+const onCreateUploadFailure = function(error) {
+  console.error('In Create Upload Failure, error is' , error);
+};
+
 
 module.exports = {
   onUploadModalClick,
-  onUploadButtonClick
+  onUploadButtonClick,
+  onCreateUploadSuccess,
+  onCreateUploadFailure
 };
