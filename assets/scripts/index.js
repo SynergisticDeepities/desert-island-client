@@ -1,6 +1,7 @@
 'use strict';
 
 const events = require('./auth/events.js');
+const uploadHandlers = require('./upload/ui.js')
 
 $(document).ready(function(){
   $('#upload-button').on('click', function() {
