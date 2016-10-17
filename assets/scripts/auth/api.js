@@ -19,7 +19,7 @@ const signIn = function(data) {
 };
 
 const changePassword = function(data){
-  let id = app.user.id;
+  let id = app.user._id;
   return  $.ajax({
     url: app.host + '/change-password/' + id,
     method: "PATCH",
