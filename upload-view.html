@@ -7,39 +7,34 @@
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <header><h1>Desert Island</h1></header>
-      <div id="description-div" class="description">
-        <h2>If you were stranded on a desert island, what five things would
-        <em>you</em> bring?</h2>
-        <h3>Come on in and post photos of your indispensibles!</h3>
-      </div>
     <nav class="navbar">
         <button type="button" id="upload-button" class="btn btn-default navbar-btn">UPLOAD</button>
         <button type="button" id="my-island-button" class="btn btn-default navbar-btn">MY ISLAND</button>
       </nav>
-      <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title" id="myModalLabel">Upload file</h4>
-            </div>
-            <div class="modal-body">
-              <form id="upload-file-form" class="upload">
-                <!--  COME BACK TO THIS -->
-                <input name="file[name]" type="text" placeholder="Picture title">
-                <br />
-                <input name="file[descriptions]" type="text" placeholder="Picture Description">
-                <br />
-                <input name="file[file]" type="file" placeholder="Choose File..."
-                onfocus="this.placeholder =''"value="">
-                <br />
-                <button type="Submit" class="btn btn-default">Upload</button>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
-            </div>
-          </div>
+      <div class="container upload-view">
+        <h1><span class="user-name">User Name</span>'s Island</h1>
+        <div class="row">
+          <div class="col-xs-3">File Name</div>
+          <div class="col-xs-6">Description</div>
+          <div class="col-xs-1">DL</div>
+          <div class="col-xs-2">Delete</div>
+          <div class="col-xs-3">File Name</div>
+          <div class="col-xs-6">Description</div>
+          <div class="col-xs-1">DL</div>
+          <div class="col-xs-2">Delete</div>
+          <div class="col-xs-3">File Name</div>
+          <div class="col-xs-6">Description</div>
+          <div class="col-xs-1">DL</div>
+          <div class="col-xs-2">Delete</div>
+          <div class="col-xs-3">File Name</div>
+          <div class="col-xs-6">Description</div>
+          <div class="col-xs-1">DL</div>
+          <div class="col-xs-2">Delete</div>
+          <div class="col-xs-3">File Name</div>
+          <div class="col-xs-6">Description</div>
+          <div class="col-xs-1">DL</div>
+          <div class="col-xs-2">Delete</div>
+
         </div>
       </div>
     </body>

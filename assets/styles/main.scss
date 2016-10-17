@@ -47,3 +47,21 @@ header {
 .nav-pills {
   float: right;
 }
+
+.upload-view {
+  border: 1px solid $black;
+  height: 475px;
+  margin: 0 auto;
+  padding: 0 35px;
+  text-align: center;
+  width: 50%;
+}
+
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-6 {
+  border: 1px solid $black;
+  height: 50px;
+  margin-top: 25px;
+}
