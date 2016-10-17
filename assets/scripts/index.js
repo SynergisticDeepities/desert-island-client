@@ -1,15 +1,16 @@
 'use strict';
 
 const events = require('./auth/events.js');
-const uploadHandlers = require('./upload/ui.js');
 
 $(document).ready(function(){
-  $('#change-password-button').hide();
-  $('#sign-out-button').hide();
+  // $('#my-island-button').hide();
+  // $('#upload-button').hide();
+  // $('#change-password-button').hide();
+  // $('#sign-out-button').hide();
+  $('.signed-in').hide();
   $('#upload-button').on('click', function() {
     $('#uploadModal').modal('show');
   });
-  uploadHandlers.onUploadModalClick();
   $('#sign-out').hide();
   // $('#change-password').hide();
   $('#sign-up-button').on('click', function(){
@@ -21,6 +22,7 @@ $(document).ready(function(){
     $('#signInModal').modal('show');
   });
   $('#sign-in-form').on('submit', events.onSignIn);
+  $('#sign-out-button').on('click', events.onSignOut);
 
   $('#change-password-button').on('click', function(){
     $('#changePasswordModal').modal('show');
@@ -28,7 +30,7 @@ $(document).ready(function(){
     $('.signed-out').hide();
   });
   $('#change-password-form').on('submit', events.onChangePassword);
-  $('.close').on('click', function(){
-    $('.signed-out').show();
-  });
+  // $('.close').on('click', function(){
+  //   $('.signed-out').show();
+  // });
 });

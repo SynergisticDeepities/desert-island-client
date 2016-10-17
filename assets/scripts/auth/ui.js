@@ -13,10 +13,8 @@ const onSignInSuccess = function (data) {
     console.log(data);
     app.user = data.user;
     $('#signInModal').modal('hide');
-    $('#sign-up-button').replaceWith($('<button type="button" id="upload-button" class="btn btn-default signed-in navbar-btn">UPLOAD</button>'));
-    $('#sign-in-button').replaceWith($('<button type="button" id="my-island-button" class="btn btn-default signed-in navbar-btn">MY ISLAND</button>'));
-    $('#change-password-button').show();
-    $('#sign-out-button').show();
+    $('.signed-out').hide();
+    $('.signed-in').show();
 };
 
 const onChangePasswordSuccess = function(){
@@ -27,11 +25,17 @@ const onError = function () {
   console.log("Sorry, there was an error.");
 };
 
+const signOutSuccess = function () {
+  $('.signed-in').hide();
+  $('.signed-out').show();
+  app.user = null;
+};
 
 
 module.exports = {
   onSignUpSuccess,
   onSignInSuccess,
   onChangePasswordSuccess,
+  signOutSuccess,
   onError,
 };
