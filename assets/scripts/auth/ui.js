@@ -13,6 +13,8 @@ const onSignInSuccess = function (data) {
     console.log(data);
     app.user = data.user;
     $('#signInModal').modal('hide');
+    $('#upload-button').show();
+    $('#my-island-button').show();
 };
 
 const onChangePasswordSuccess = function(){
