@@ -1,6 +1,6 @@
 'use strict';
 
-const events = require('./auth/events.js');
+const events = require('./events.js');
 const uploadHandlers = require('./upload/ui.js');
 
 $(document).ready(function(){
