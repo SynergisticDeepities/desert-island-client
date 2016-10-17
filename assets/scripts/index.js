@@ -3,6 +3,10 @@
 const events = require('./auth/events.js');
 
 $(document).ready(function(){
+  $('#upload-button').on('click', function() {
+    $('#uploadModal').modal('show');
+  });
+  uploadHandlers.onUploadModalClick();
   $('#sign-out').hide();
   // $('#change-password').hide();
   $('#sign-up-button').on('click', function(){
