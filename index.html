@@ -101,16 +101,16 @@
             <h4 class="modal-title" id="myModalLabel">Upload file</h4>
           </div>
           <div class="modal-body">
-            <form id="upload-file-form" class="upload">
+            <form id="multipart-form-data" class="upload" enctype="multipart/form-data">
               <!--  COME BACK TO THIS -->
-              <input name="file[title]" type="text" placeholder="Picture title">
+              <input name="upload[title]" type="text" placeholder="Picture title">
               <br />
-              <input name="file[description]" type="text" placeholder="Picture Description">
+              <input name="upload[description]" type="text" placeholder="Picture Description">
               <br />
-              <input name="file[file]" type="file" placeholder="Choose File..."
+              <input name="upload[file]" type="file" placeholder="Choose File..."
               onfocus="this.placeholder =''"value="">
               <br />
-              <button type="Submit" class="btn btn-default">Upload</button>
+              <input type="submit" name="submit" value="submit" class="btn btn-default">
             </form>
           </div>
           <div class="modal-footer">
