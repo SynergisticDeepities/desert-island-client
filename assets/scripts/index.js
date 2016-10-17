@@ -5,6 +5,7 @@ const uploadHandlers = require('./upload/ui.js');
 
 $(document).ready(function(){
   $('#change-password-button').hide();
+  $('#sign-out-button').hide();
   $('#upload-button').on('click', function() {
     $('#uploadModal').modal('show');
   });

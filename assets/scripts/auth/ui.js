@@ -15,10 +15,12 @@ const onSignInSuccess = function (data) {
     $('#signInModal').modal('hide');
     $('#sign-up-button').replaceWith($('<button type="button" id="upload-button" class="btn btn-default signed-in navbar-btn">UPLOAD</button>'));
     $('#sign-in-button').replaceWith($('<button type="button" id="my-island-button" class="btn btn-default signed-in navbar-btn">MY ISLAND</button>'));
+    $('#change-password-button').show();
+    $('#sign-out-button').show();
 };
 
 const onChangePasswordSuccess = function(){
-  console.log("Password successfully changed.");
+  $('#changePasswordModal').modal('hide');
 };
 
 const onError = function () {
