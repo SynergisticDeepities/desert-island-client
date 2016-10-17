@@ -1,8 +1,20 @@
 'use strict';
 
 const events = require('./auth/events.js');
+<<<<<<< Updated upstream
 
 $(document).ready(function(){
+=======
+const uploadHandlers = require('./upload/ui.js');
+
+$(document).ready(function(){
+  $('#upload-button').hide();
+  $('#my-island-button').hide();
+  $('#upload-button').on('click', function() {
+    $('#uploadModal').modal('show');
+  });
+  uploadHandlers.onUploadModalClick();
+>>>>>>> Stashed changes
   $('#sign-out').hide();
   // $('#change-password').hide();
   $('#sign-up-button').on('click', function(){

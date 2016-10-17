@@ -86,5 +86,34 @@
         </div>
       </div>
     </div>
+    <nav class="navbar">
+        <button type="button" id="upload-button" class="btn btn-default navbar-btn">UPLOAD</button>
+        <button type="button" id="my-island-button" class="btn btn-default navbar-btn">MY ISLAND</button>
+      </nav>
+      <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">Upload file</h4>
+            </div>
+            <div class="modal-body">
+              <form id="upload-file-form" class="upload">
+                <!--  COME BACK TO THIS -->
+                <input name="file[title]" type="text" placeholder="Picture title">
+                <br />
+                <input name="file[description]" type="text" placeholder="Picture Description">
+                <br />
+                <input name="file[file]" type="file" placeholder="Choose File..."
+                onfocus="this.placeholder =''"value="">
+                <br />
+                <button type="Submit" class="btn btn-default">Upload</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </body>
 </html>

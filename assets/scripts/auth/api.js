@@ -20,7 +20,10 @@ const signIn = function(data) {
 
 const changePassword = function(data){
   let id = app.user._id;
+<<<<<<< Updated upstream
   console.log(id);
+=======
+>>>>>>> Stashed changes
   return  $.ajax({
     url: app.host + '/change-password/' + id,
     method: "PATCH",
