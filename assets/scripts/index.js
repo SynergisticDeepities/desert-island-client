@@ -1,21 +1,17 @@
 'use strict';
 
-const events = require('./events.js');
+const events = require('./auth/events.js');
 
 $(document).ready(function(){
   $('#sign-out').hide();
   // $('#change-password').hide();
   $('#sign-up-button').on('click', function(){
     $('#signUpModal').modal('show');
-    $('#sign-out-button').show();
-    $('.signed-out').hide();
   });
   $('#sign-up-form').on('submit', events.onSignUp);
 
   $('#sign-in-button').on('click', function(){
     $('#signInModal').modal('show');
-    $('#sign-out-button').show();
-    $('.signed-out').hide();
   });
   $('#sign-in-form').on('submit', events.onSignIn);
 
