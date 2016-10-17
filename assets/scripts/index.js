@@ -3,10 +3,6 @@
 const events = require('./auth/events.js');
 
 $(document).ready(function(){
-  // $('#my-island-button').hide();
-  // $('#upload-button').hide();
-  // $('#change-password-button').hide();
-  // $('#sign-out-button').hide();
   $('.signed-in').hide();
   $('#upload-button').on('click', function() {
     $('#uploadModal').modal('show');
