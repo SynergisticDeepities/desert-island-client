@@ -1,6 +1,14 @@
 $black: #000;
 $gray: #a9a9a9;
 
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
 header {
   border: 10px solid $gray;
   margin: 0 auto;
@@ -34,4 +42,8 @@ header {
   margin: 0 auto;
   margin-top: 25px;
   width: 15%;
+}
+
+.nav-pills {
+  float: right;
 }

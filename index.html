@@ -7,7 +7,14 @@
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <header><h1>Desert Island</h1></header>
+      <header class="clearfix">
+        <h1>Desert Island</h1>
+        <ul class="nav nav-pills">
+          <li role="presentation" class="active" id="change-password-button"><a href="#">Change Password</a></li>
+          <li role="presentation" class="active" id="sign-out-button"><a href="#">Sign Out</a></li>
+        </ul>
+      </header>
+
       <div id="description-div" class="description">
         <h2>If you were stranded on a desert island, what five things would
         <em>you</em> bring?</h2>
@@ -16,9 +23,6 @@
     <nav class="navbar">
         <button type="button" id="sign-up-button" class="btn btn-default navbar-btn signed-out sign-up">SIGN UP</button>
         <button type="button" id="sign-in-button" class="btn btn-default navbar-btn signed-out sign-in">SIGN IN</button>
-        <button type="button" id="change-password-button" class="btn btn-default navbar-btn signed-in change-password">CHANGE PASSWORD</button>
-        <button type="button" id="upload-button" class="btn btn-default navbar-btn">UPLOAD</button>
-        <button type="button" id="my-island-button" class="btn btn-default navbar-btn">MY ISLAND</button>
       </nav>
       <div class="modal fade" id="signUpModal" tabindex="-1" ole="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">

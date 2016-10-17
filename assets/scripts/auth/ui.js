@@ -13,12 +13,14 @@ const onSignInSuccess = function (data) {
     console.log(data);
     app.user = data.user;
     $('#signInModal').modal('hide');
-    $('#upload-button').show();
-    $('#my-island-button').show();
+    $('#sign-up-button').replaceWith($('<button type="button" id="upload-button" class="btn btn-default signed-in navbar-btn">UPLOAD</button>'));
+    $('#sign-in-button').replaceWith($('<button type="button" id="my-island-button" class="btn btn-default signed-in navbar-btn">MY ISLAND</button>'));
+    $('#change-password-button').show();
+    $('#sign-out-button').show();
 };
 
 const onChangePasswordSuccess = function(){
-  console.log("Password successfully changed.");
+  $('#changePasswordModal').modal('hide');
 };
 
 const onError = function () {
