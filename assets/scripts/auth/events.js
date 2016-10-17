@@ -28,9 +28,16 @@ const onChangePassword = function (event) {
     .fail(ui.onError);
 };
 
+const onSignOut = function (event) {
+  event.preventDefault();
+  api.signOut()
+    .done(ui.signOutSuccess)
+    .fail(ui.onError);
+};
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
+  onSignOut
 };

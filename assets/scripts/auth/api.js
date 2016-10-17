@@ -30,9 +30,20 @@ const changePassword = function(data){
   });
 };
 
+const signOut = function() {
+  return $.ajax({
+    url: app.host + '/sign-out/' + app.user._id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+  });
+};
+
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
+  signOut
 };
