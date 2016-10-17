@@ -6,11 +6,6 @@
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-    <nav class="navbar">
-        <button type="button" id="upload-button" class="btn btn-default navbar-btn">UPLOAD</button>
-        <button type="button" id="my-island-button" class="btn btn-default navbar-btn">MY ISLAND</button>
-      </nav>
       <div class="container upload-view">
         <h1><span class="user-name">User Name</span>'s Island</h1>
         <div class="row">
@@ -34,8 +29,13 @@
           <div class="col-xs-6">Description</div>
           <div class="col-xs-1">DL</div>
           <div class="col-xs-2">Delete</div>
-
         </div>
       </div>
+      <footer>
+        <button type="button" id="upload-button"
+        class="btn btn-default upload-view-button">UPLOAD</button>
+      <button type="button" id="share-button"
+        class="btn btn-default upload-view-button">SHARE</button>
+      </footer>
     </body>
 </html>

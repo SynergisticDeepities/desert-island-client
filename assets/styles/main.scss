@@ -52,6 +52,7 @@ header {
   border: 1px solid $black;
   height: 475px;
   margin: 0 auto;
+  margin-top: 25px;
   padding: 0 35px;
   text-align: center;
   width: 50%;
@@ -64,4 +65,22 @@ header {
   border: 1px solid $black;
   height: 50px;
   margin-top: 25px;
+}
+
+footer {
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 350px;
+}
+
+.upload-view-button {
+  border: 1px solid $black;
+  border: 1px solid $black;
+  box-shadow:
+    5px 5px 0 0 $black,
+    5px 5px 0 0 $black;
+  height: 50px;
+  margin-right: 20px;
+  width: 150px;
 }
