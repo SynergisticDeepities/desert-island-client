@@ -31,8 +31,23 @@ const onCreateUploadFailure = function(error) {
   console.error('In onCreateUploadFailure, error is:' , error);
 };
 
-const onDeleteUploadSuccess = function(id) {
-  console.log(id);
+const updateUserImages = function(){
+  let id = app.user._id;
+  let token = app.user.token;
+  return $.ajax({
+    url: app.host+'/users/'+ id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + token
+      }
+    });
+  };
+
+
+const onDeleteUploadSuccess = function() {
+  updateUserImages()
+  .done(console.log("success!"))
+  .fail(console.log("fail!"));
 };
 
 const onDeleteUploadFailure = function(error) {
