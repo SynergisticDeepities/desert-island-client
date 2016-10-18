@@ -32,7 +32,7 @@ const onCreateUploadFailure = function(error) {
 };
 
 const updateUserSuccess = function(data) {
-  app.user = data.user;
+  app.user.uploads = data.user.uploads;
   console.log('in updateUserSuccess, data is:', data);
   console.log('in updateUserSuccess, app.user is:', app.user);
 };
