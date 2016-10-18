@@ -17,6 +17,10 @@ const onUploadModalClick = function () {
 const createUploadSuccess = function(data) {
   let newUpload = data.upload;
   app.user.uploads.push(newUpload);
+  $('#uploadModal').modal('hide');
+  $('#description-div').hide();
+  $('#images-display-box').show();
+  
   console.log('In onCreateUploadSuccess, data is:' , data);
   console.log('and app.user.uploads is:', app.user.uploads);
 };

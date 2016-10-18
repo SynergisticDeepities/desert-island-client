@@ -87,7 +87,31 @@ footer {
 
 .fa-arrow-down {
   background-color: green;
-  color: white;
   border-radius: 50px;
+  color: white;
+
   padding: 5px;
+}
+
+.images-display {
+  border: 1px solid $black;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.thumbnail-top{
+  border: 1px solid $black;
+  float: left;
+  height: 200px;
+  margin: 0 auto;
+  margin-right: 150px;
+  width: 200px;
+}
+
+.thumbnail-bottom{
+  border: 1px solid $black;
+  height: 200px;
+  margin: 0 auto;
+  margin-right: 200px;
+  width: 200px;
 }

@@ -27,6 +27,7 @@ const onError = function () {
 
 const signOutSuccess = function () {
   $('.signed-in').hide();
+  $('#images-display-box').hide();
   $('.signed-out').show();
   app.user = null;
 };
