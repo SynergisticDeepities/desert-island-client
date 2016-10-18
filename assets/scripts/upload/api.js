@@ -20,10 +20,7 @@ const createUpload = function (data) {
         reject(jqxhr);
       }
     });
-  })
-  .then (console.log)
-  .catch (console.error);
-
+  });
 };
 
 module.exports = {
