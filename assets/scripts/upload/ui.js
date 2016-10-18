@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require('../../scripts/app');
+const displayImageThumbnails = require('../templates/display-images.handlebars');
 
 const onUploadButtonClick = function() {
   $('#upload-button').on('click', function() {
@@ -20,7 +21,8 @@ const createUploadSuccess = function(data) {
   $('#uploadModal').modal('hide');
   $('#description-div').hide();
   $('#images-display-box').show();
-  
+  $('#images-display-box .row').html(displayImageThumbnails(app.user));
+
   console.log('In onCreateUploadSuccess, data is:' , data);
   console.log('and app.user.uploads is:', app.user.uploads);
 };

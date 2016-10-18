@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require('../../scripts/app');
+const displayImageThumbnails = require('../templates/display-images.handlebars');
 
 const onSignUpSuccess = function (data) {
   if (data) {
@@ -15,6 +16,9 @@ const onSignInSuccess = function (data) {
     $('#signInModal').modal('hide');
     $('.signed-out').hide();
     $('.signed-in').show();
+    $('#images-display-box').show();
+    $('#images-display-box .row').append(displayImageThumbnails(app.user));
+    // debugger;
 };
 
 const onChangePasswordSuccess = function(){
@@ -27,6 +31,7 @@ const onError = function () {
 
 const signOutSuccess = function () {
   $('.signed-in').hide();
+  $('#images-display-box .row').html('');
   $('#images-display-box').hide();
   $('.signed-out').show();
   app.user = null;
