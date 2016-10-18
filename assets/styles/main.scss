@@ -24,38 +24,67 @@ footer,
   margin: 0 auto;
 }
 
+.description,
+.navbar,
+.upload-view,
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-6 {
+  margin-top: 25px;
+}
+
+header,
+.description,
+.upload-view {
+  text-align: center;
+}
 
 header,
 .description {
   border: 10px solid $gray;
 }
 
-header {
-  margin-top: 50px;
+header,
+.description,
+.fa-arrow-down {
   padding: 5px;
-  position: relative;
-  text-align: center;
-  width: 70%;
-}
+ }
 
-.description {
-  margin-top: 25px;
-  padding: 5px;
-  text-align: center;
-  width: 60%;
-}
+ .signed-out,
+ .signed-in,
+ .upload-view,
+ .col-xs-1,
+ .col-xs-2,
+ .col-xs-3,
+ .col-xs-6,
+ .upload-view-button,
+ .images-display,
+ .thumbnail-top,
+ .thumbnail-bottom {
+   border: 1px solid $black;
+
+ }
 
 .signed-out,
 .signed-in {
-  border: 1px solid $black;
   box-shadow: 5px 5px 0 0 $black,
               5px 5px 0 0 $black;
   height: 50px;
   width: 200px;
 }
 
+header {
+  margin-top: 50px;
+  position: relative;
+  width: 70%;
+}
+
+.description {
+  width: 60%;
+}
+
 .navbar {
-  margin-top: 25px;
   width: 15%;
 }
 
@@ -64,11 +93,8 @@ header {
 }
 
 .upload-view {
-  border: 1px solid $black;
   height: 475px;
-  margin-top: 25px;
   padding: 0 35px;
-  text-align: center;
   width: 50%;
 }
 
@@ -76,9 +102,7 @@ header {
 .col-xs-2,
 .col-xs-3,
 .col-xs-6 {
-  border: 1px solid $black;
   height: 50px;
-  margin-top: 25px;
 }
 
 footer {
@@ -88,7 +112,6 @@ footer {
 }
 
 .upload-view-button {
-  border: 1px solid $black;
   box-shadow: 5px 5px 0 0 $black,
               5px 5px 0 0 $black;
   height: 50px;
@@ -100,17 +123,13 @@ footer {
   background-color: $green;
   border-radius: 50px;
   color: $white;
-
-  padding: 5px;
 }
 
 .images-display {
-  border: 1px solid $black;
   height: 500px;
 }
 
 .thumbnail-top {
-  border: 1px solid $black;
   float: left;
   height: 200px;
   margin-right: 150px;
@@ -118,7 +137,6 @@ footer {
 }
 
 .thumbnail-bottom {
-  border: 1px solid $black;
   height: 200px;
   margin-right: 200px;
   width: 200px;
