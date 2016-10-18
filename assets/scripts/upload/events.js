@@ -2,6 +2,7 @@
 
  const api = require('./api');
  const ui = require('./ui');
+ const getFormFields = require('../../../lib/get-form-fields');
 // const app = require('../app.js');
 
 
@@ -25,8 +26,25 @@ const onDeleteUpload = function(event) {
   .catch((error) => ui.onDeleteUploadFailure(error));
 };
 
+const onEditUpload = function(event){
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  let imageId = $(event.target).attr('class');
+  console.log(imageId);
+  api.editUpload(data,imageId)
+  .then(api.getUser)
+  .then((data) => ui.updateUserSuccess(data))
+  .then(ui.onUpdateSuccess)
+  .catch((error) => ui.onError(error));
+
+};
+
+
+
+
 
 module.exports = {
   onCreateUpload,
   onDeleteUpload,
+  onEditUpload
 };

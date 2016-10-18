@@ -43,6 +43,27 @@ const deleteUpload = function (id) {
   });
 };
 
+const editUpload = function(data, imageId) {
+  return new Promise((resolve, reject) => {
+    return $.ajax({
+      url: app.host + "/uploads/" + imageId,
+      method: 'PATCH',
+      headers: {
+        Authorization: 'Token token=' + app.user.token
+      },
+      data: data,
+      success(data) {
+        resolve(data);
+      },
+      failure (jqxhr) {
+        reject(jqxhr);
+      }
+    });
+  });
+  };
+
+
+
 const getUser = function() {
   let id = app.user._id;
   return new Promise((resolve, reject) => {
@@ -68,4 +89,5 @@ module.exports = {
   createUpload,
   deleteUpload,
   getUser,
+  editUpload
 };

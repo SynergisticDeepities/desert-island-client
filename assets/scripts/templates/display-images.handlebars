@@ -1,7 +1,7 @@
 {{#each uploads}}
 <div class="col-xs-2">
   <div class="thumbnail">
-    <img src={{this.location}}>
+    <a href = {{this.location}}><img src={{this.location}}></a>
     <div class="caption">
       <h5>{{this.title}}</h5>
       <p>{{this.description}}</p>
@@ -9,7 +9,7 @@
         class="btn btn-danger delete" id="{{this._id}}">
         <i class="fa fa-trash-o fa-lg"></i> DELETE
       </button>
-      <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i>
+      <i class="fa fa-pencil-square edit-button fa-2x" aria-hidden="true" id="{{this._id}}"></i>
     </div>
   </div>
   </div>

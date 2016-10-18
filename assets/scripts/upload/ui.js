@@ -50,6 +50,10 @@ const onDeleteUploadFailure = function(error) {
   console.log(error);
 };
 
+const onUpdateSuccess = function(){
+$('#images-display-box .row').html(displayImageThumbnails(app.user));
+$('#editModal').modal('hide');
+};
 
 module.exports = {
   onUploadModalClick,
@@ -60,4 +64,5 @@ module.exports = {
   updateUserFailure,
   onDeleteUploadSuccess,
   onDeleteUploadFailure,
+  onUpdateSuccess
 };
