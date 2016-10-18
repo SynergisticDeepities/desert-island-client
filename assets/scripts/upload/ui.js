@@ -15,7 +15,7 @@ const onUploadModalClick = function () {
   });
 };
 
-const createUploadSuccess = function(data) {
+const onCreateUploadSuccess = function(data) {
   let newUpload = data.upload;
   app.user.uploads.push(newUpload);
   $('#uploadModal').modal('hide');
@@ -27,14 +27,24 @@ const createUploadSuccess = function(data) {
   console.log('and app.user.uploads is:', app.user.uploads);
 };
 
-const createUploadFailure = function(error) {
+const onCreateUploadFailure = function(error) {
   console.error('In onCreateUploadFailure, error is:' , error);
+};
+
+const onDeleteUploadSuccess = function(id) {
+  console.log(id);
+};
+
+const onDeleteUploadFailure = function(error) {
+  console.log(error);
 };
 
 
 module.exports = {
   onUploadModalClick,
   onUploadButtonClick,
-  createUploadSuccess,
-  createUploadFailure,
+  onCreateUploadSuccess,
+  onCreateUploadFailure,
+  onDeleteUploadSuccess,
+  onDeleteUploadFailure,
 };

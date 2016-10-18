@@ -33,4 +33,5 @@ $(document).ready(function(){
   // });
   //$('#multipart-form-data').on('submit', events.onCreateUpload);
   $('#multipart-form-data').on('submit', uploadEvents.onCreateUpload);
+  $('#images-display-box .row').on('click', '.delete', uploadEvents.onDeleteUpload);
 });

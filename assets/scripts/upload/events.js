@@ -11,11 +11,20 @@ const onCreateUpload = function(event) {
   console.log("In events");
   let data = new FormData(event.target);
   api.createUpload(data)
-    .then((data) => ui.createUploadSuccess(data))
-    .catch((error) => ui.createUploadFailure(error));
+    .then((data) => ui.onCreateUploadSuccess(data))
+    .catch((error) => ui.onCreateUploadFailure(error));
+  };
+
+  const onDeleteUpload = function(event) {
+    event.preventDefault();
+    let id = event.target.id;
+    api.deleteUpload(id)
+    .then((id) => ui.onDeleteUploadSuccess(id))
+    .catch((error) => ui.onDeleteUploadFailure(error));
   };
 
 
 module.exports = {
   onCreateUpload,
+  onDeleteUpload,
 };
