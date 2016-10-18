@@ -1,5 +1,7 @@
 $black: #000;
 $gray: #a9a9a9;
+$green: #0f0;
+$white: #fff;
 
 .clearfix::after {
   clear: both;
@@ -9,38 +11,80 @@ $gray: #a9a9a9;
   visibility: hidden;
 }
 
-header {
-  border: 10px solid $gray;
+header,
+footer,
+.description,
+.signed-out,
+.signed-in,
+.navbar,
+.upload-view,
+.images-display,
+.thumbnail-top,
+.thumbnail-bottom {
   margin: 0 auto;
-  margin-top: 50px;
-  padding: 5px;
-  position: relative;
-  text-align: center;
-  width: 70%;
 }
 
+.description,
+.navbar,
+.upload-view,
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-6 {
+  margin-top: 25px;
+}
+
+header,
+.description,
+.upload-view {
+  text-align: center;
+}
+
+header,
 .description {
   border: 10px solid $gray;
-  margin: 0 auto;
-  margin-top: 25px;
-  padding: 5px;
-  text-align: center;
-  width: 60%;
 }
+
+header,
+.description,
+.fa-arrow-down {
+  padding: 5px;
+ }
+
+ .signed-out,
+ .signed-in,
+ .upload-view,
+ .col-xs-1,
+ .col-xs-2,
+ .col-xs-3,
+ .col-xs-6,
+ .upload-view-button,
+ .images-display,
+ .thumbnail-top,
+ .thumbnail-bottom {
+   border: 1px solid $black;
+
+ }
 
 .signed-out,
 .signed-in {
-  border: 1px solid $black;
-  box-shadow:
-    5px 5px 0 0 $black,
-    5px 5px 0 0 $black;
+  box-shadow: 5px 5px 0 0 $black,
+              5px 5px 0 0 $black;
   height: 50px;
   width: 200px;
 }
 
+header {
+  margin-top: 50px;
+  position: relative;
+  width: 70%;
+}
+
+.description {
+  width: 60%;
+}
+
 .navbar {
-  margin: 0 auto;
-  margin-top: 25px;
   width: 15%;
 }
 
@@ -49,12 +93,8 @@ header {
 }
 
 .upload-view {
-  border: 1px solid $black;
   height: 475px;
-  margin: 0 auto;
-  margin-top: 25px;
   padding: 0 35px;
-  text-align: center;
   width: 50%;
 }
 
@@ -62,56 +102,42 @@ header {
 .col-xs-2,
 .col-xs-3,
 .col-xs-6 {
-  border: 1px solid $black;
   height: 50px;
-  margin-top: 25px;
 }
 
 footer {
   height: 60px;
-  margin: 0 auto;
   margin-top: 15px;
   width: 350px;
 }
 
 .upload-view-button {
-  border: 1px solid $black;
-  border: 1px solid $black;
-  box-shadow:
-    5px 5px 0 0 $black,
-    5px 5px 0 0 $black;
+  box-shadow: 5px 5px 0 0 $black,
+              5px 5px 0 0 $black;
   height: 50px;
   margin-right: 20px;
   width: 150px;
 }
 
 .fa-arrow-down {
-  background-color: green;
+  background-color: $green;
   border-radius: 50px;
-  color: white;
-
-  padding: 5px;
+  color: $white;
 }
 
 .images-display {
-  border: 1px solid $black;
   height: 500px;
-  margin: 0 auto;
 }
 
-.thumbnail-top{
-  border: 1px solid $black;
+.thumbnail-top {
   float: left;
   height: 200px;
-  margin: 0 auto;
   margin-right: 150px;
   width: 200px;
 }
 
-.thumbnail-bottom{
-  border: 1px solid $black;
+.thumbnail-bottom {
   height: 200px;
-  margin: 0 auto;
   margin-right: 200px;
   width: 200px;
 }

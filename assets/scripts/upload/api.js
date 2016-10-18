@@ -23,6 +23,49 @@ const createUpload = function (data) {
   });
 };
 
+const deleteUpload = function (id) {
+  return new Promise((resolve, reject) => {
+    return $.ajax({
+      url: app.host + "/uploads/" + id,
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Token token=' + app.user.token
+      },
+      contentType: false,
+      processData: false,
+      success(data) {
+        resolve(data);
+      },
+      failure (jqxhr) {
+        reject(jqxhr);
+      }
+    });
+  });
+};
+
+const getUser = function() {
+  let id = app.user._id;
+  return new Promise((resolve, reject) => {
+    return $.ajax({
+      url: app.host + "/users/" + id,
+      method: 'GET',
+      headers: {
+        Authorization: 'Token token=' + app.user.token
+      },
+      contentType: false,
+      processData: false,
+      success(data) {
+        resolve(data);
+      },
+      failure (jqxhr) {
+        reject(jqxhr);
+      }
+    });
+  });
+};
+
 module.exports = {
   createUpload,
+  deleteUpload,
+  getUser,
 };
