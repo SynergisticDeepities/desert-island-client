@@ -13,15 +13,17 @@ const onCreateUpload = function(event) {
   api.createUpload(data)
     .then((data) => ui.onCreateUploadSuccess(data))
     .catch((error) => ui.onCreateUploadFailure(error));
-  };
+};
 
-  const onDeleteUpload = function(event) {
-    event.preventDefault();
-    let id = event.target.id;
-    api.deleteUpload(id)
-    .then((id) => ui.onDeleteUploadSuccess(id))
-    .catch((error) => ui.onDeleteUploadFailure(error));
-  };
+const onDeleteUpload = function(event) {
+  event.preventDefault();
+  let id = event.target.id;
+  api.deleteUpload(id)
+  .then(api.getUser)
+  .then((data) => ui.updateUserSuccess(data))
+  .then(ui.onDeleteUploadSuccess)
+  .catch((error) => ui.onDeleteUploadFailure(error));
+};
 
 
 module.exports = {
