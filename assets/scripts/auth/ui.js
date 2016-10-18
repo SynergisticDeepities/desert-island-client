@@ -2,6 +2,7 @@
 
 const app = require('../../scripts/app');
 const displayImageThumbnails = require('../templates/display-images.handlebars');
+const displayNameHeader = require('../templates/display-name.handlebars');
 
 const onSignUpSuccess = function (data) {
   if (data) {
@@ -17,6 +18,7 @@ const onSignInSuccess = function (data) {
     $('.signed-out').hide();
     $('.signed-in').show();
     $('#images-display-box').show();
+    $('header h1').html(displayNameHeader(app.user));
     $('#images-display-box .row').append(displayImageThumbnails(app.user));
     // debugger;
 };
