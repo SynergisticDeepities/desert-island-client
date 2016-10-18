@@ -120,6 +120,28 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Edit File</h4>
+          </div>
+          <div class="modal-body">
+            <form id="edit-form" class="edit">
+              <!--  COME BACK TO THIS -->
+              <input name="upload[title]" type="text" placeholder="Picture title">
+              <br />
+              <input name="upload[description]" type="text" placeholder="Picture Description">
+              <br />
+              <input type="submit" name="submit" value="Update" class="btn btn-default">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="images-display-box" class="images-display">
       <div class="row">
       </div>

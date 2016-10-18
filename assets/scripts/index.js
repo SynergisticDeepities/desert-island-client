@@ -34,4 +34,13 @@ $(document).ready(function(){
   //$('#multipart-form-data').on('submit', events.onCreateUpload);
   $('#multipart-form-data').on('submit', uploadEvents.onCreateUpload);
   $('#images-display-box .row').on('click', '.delete', uploadEvents.onDeleteUpload);
+  $('#images-display-box .row').on('click', '.edit-button', function() {
+    let this_id = $(this).attr('id');
+    $('#edit-form').attr('class',this_id);
+    $('#editModal').modal('show');
+  });
+  $('#edit-form').on('submit', uploadEvents.onEditUpload);
+
+
+
 });
