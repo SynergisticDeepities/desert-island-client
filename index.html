@@ -112,6 +112,10 @@
             <h4 class="modal-title" id="myModalLabel">Change Password</h4>
           </div>
           <div class="modal-body">
+            <div class="alert alert-warning alert-dismissible" id="change-password-error" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <strong>Whoops!</strong> Your password was not changed successfully.
+            </div>
             <form id="change-password-form" class="change-password">
               <input name="passwords[old]" type="password"
               placeholder="old password" onfocus="this.placeholder =''" value="">

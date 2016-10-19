@@ -36,7 +36,7 @@ const onChangePasswordSuccess = function(){
 };
 
 const onError = function () {
-  console.log("Sorry, there was an error.");
+  $('#change-password-error').show();
 };
 
 const onSignUpError = function () {
@@ -47,9 +47,15 @@ const onSignInError = function () {
   $('#sign-in-error').show();
 };
 
+const onChangePasswordError = function () {
+  $('#change-password-error').show();
+};
+
 const signOutSuccess = function () {
   $('.signed-in').hide();
   $('#sign-up-error').hide();
+  $('#sign-in-error').hide();
+  $('#change-password-error').hide();
   $('#images-display-box .row').html('');
   $('#images-display-box').hide();
   $('.hamburger').hide();
@@ -96,4 +102,5 @@ module.exports = {
   sidebarFailure,
   onSignUpError,
   onSignInError,
+  onChangePasswordError,
 };
