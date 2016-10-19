@@ -53,7 +53,19 @@ const signOutSuccess = function () {
 const sidebarSuccess = function (data) {
   console.log(data);
   app.users = data.users;
-  console.log('inside sidebarSuccess, app.users is:', app.users);
+  // debugger;
+
+  app.users.forEach((user) => {
+    if (user._id === app.user._id) {
+      user.isOwner = true;
+    } else {
+      user.isOwner = false;
+    }
+  });
+
+  console.log('after assigning isOwner properties, app.users is:', app.users);
+
+  // console.log('inside sidebarSuccess, app.users is:', app.users);
   $('.sidebar-nav').append(populateSidebar(app));
 };
 

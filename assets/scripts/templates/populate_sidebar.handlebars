@@ -4,7 +4,13 @@
     </a>
 </li>
 {{#each users}}
-    <li>
-      <a href="#">{{this.userName}}</a>
+  {{#if this.isOwner}}
+    <li class='user-link' style="background:red">
+      <a href="#" id="{{this._id}}">{{this.userName}}</a>
     </li>
+  {{else}}
+    <li class='user-link'>
+      <a href="#" id="{{this._id}}">{{this.userName}}</a>
+    </li>
+  {{/if}}
 {{/each}}

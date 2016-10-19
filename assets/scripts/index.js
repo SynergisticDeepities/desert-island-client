@@ -64,11 +64,15 @@ $(document).ready(function(){
     hamburger_cross();
   });
 
-
-
   $('[data-toggle="offcanvas"]').click(function () {
     $('#wrapper').toggleClass('toggled');
   });
 
+  uploadEvents.addSidebarHandlers();
+
+  $('#sidebar').on('click', '.user-link', (function () {
+    hamburger_cross();
+    $('#wrapper').toggleClass('toggled');
+  }));
 
 });
