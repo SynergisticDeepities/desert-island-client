@@ -3,6 +3,7 @@
 const app = require('../../scripts/app');
 const displayImageThumbnails = require('../templates/display-images.handlebars');
 const displayNameHeader = require('../templates/display-name.handlebars');
+const populateSidebar = require('../templates/populate_sidebar.handlebars');
 
 const onSignUpSuccess = function (data) {
   if (data) {
@@ -21,6 +22,7 @@ const onSignInSuccess = function (data) {
     $('.navbar').css('float', 'left');
     $('.navbar').css('margin-left', '250px');
     $('.navbar').css('margin-top', '25px');
+    $('#sidebar-wrapper').css('margin-top', '0px');
     $('.navbar').css('margin-right', '-125px');
     $('#images-display-box').show();
     $('header h1').html(displayNameHeader(app.user));
@@ -44,6 +46,18 @@ const signOutSuccess = function () {
   $('.navbar').css('float', 'none');
   $('.navbar').css('margin', '0 auto');
   app.user = null;
+  $('.sidebar-nav').html('');
+};
+
+const sidebarSuccess = function (data) {
+  console.log(data);
+  app.users = data.users;
+  console.log('inside sidebarSuccess, app.users is:', app.users);
+  $('.sidebar-nav').append(populateSidebar(app));
+};
+
+const sidebarFailure = function (error) {
+  console.error(error);
 };
 
 
@@ -53,4 +67,6 @@ module.exports = {
   onChangePasswordSuccess,
   signOutSuccess,
   onError,
+  sidebarSuccess,
+  sidebarFailure
 };

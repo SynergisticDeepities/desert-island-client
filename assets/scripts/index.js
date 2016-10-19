@@ -28,10 +28,7 @@ $(document).ready(function(){
     $('.signed-out').hide();
   });
   $('#change-password-form').on('submit', authEvents.onChangePassword);
-  // $('.close').on('click', function(){
-  //   $('.signed-out').show();
-  // });
-  //$('#multipart-form-data').on('submit', events.onCreateUpload);
+
   $('#multipart-form-data').on('submit', uploadEvents.onCreateUpload);
   $('#images-display-box .row').on('click', '.delete', uploadEvents.onDeleteUpload);
   $('#images-display-box .row').on('click', '.edit-button', function() {
@@ -41,6 +38,37 @@ $(document).ready(function(){
   });
   $('#edit-form').on('submit', uploadEvents.onEditUpload);
 
+// SIDE BAR FUNCTIONALITY
+
+// added code from bootsnip for sidebar
+  let trigger = $('.hamburger'),
+    overlay = $('.overlay'),
+    isClosed = false;
+
+  function hamburger_cross() {
+
+    if (isClosed == true) {
+      overlay.hide();
+      trigger.removeClass('is-open');
+      trigger.addClass('is-closed');
+      isClosed = false;
+    } else {
+      overlay.show();
+      trigger.removeClass('is-closed');
+      trigger.addClass('is-open');
+      isClosed = true;
+    }
+  }
+
+  trigger.click(function () {
+    hamburger_cross();
+  });
+
+
+
+  $('[data-toggle="offcanvas"]').click(function () {
+    $('#wrapper').toggleClass('toggled');
+  });
 
 
 });

@@ -8,6 +8,16 @@
       <script src="https://use.fontawesome.com/74ce829eb8.js"></script>
     </head>
     <body>
+      <!-- sidebar -->
+      <div id="wrapper">
+        <div class="overlay"></div>
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation" style="margin-top: 0px !important">
+          <ul class="nav sidebar-nav">
+          </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+        <div id="page-content-wrapper">
+
       <header class="clearfix">
         <h1>Desert Island</h1>
         <ul class="nav nav-pills">
@@ -15,6 +25,12 @@
           <li role="presentation" class="signed-in btn btn-default" id="sign-out-button">SIGN OUT<a href="#"></a></li>
         </ul>
       </header>
+
+      <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+        <span class="hamb-top"></span>
+        <span class="hamb-middle"></span>
+        <span class="hamb-bottom"></span>
+      </button>
 
       <div id="description-div" class="description">
         <h2>If you were stranded on a desert island, what five things would
@@ -26,6 +42,9 @@
         <button type="button" id="upload-button" class="btn btn-default navbar-btn signed-in this-upload-button">UPLOAD</button>
         <button type="button" id="sign-in-button" class="btn btn-default navbar-btn signed-out sign-in">SIGN IN</button>
       </nav>
+    </div>
+    </div>
+    <!-- END WRAPPER -->
       <div class="modal fade" id="signUpModal" tabindex="-1" ole="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -107,8 +126,8 @@
               <br />
               <input name="upload[description]" type="text" placeholder="Picture Description">
               <br />
-              <input name="upload[file]" type="file" placeholder="Choose File..."
-              onfocus="this.placeholder =''"value="">
+              <input name="upload[file]" type="file" accept="image/*" placeholder="Choose File..."
+              onfocus="this.placeholder =''" value="">
               <br />
               <input type="submit" name="submit" value="submit" class="btn btn-default">
             </form>
