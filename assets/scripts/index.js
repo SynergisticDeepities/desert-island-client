@@ -5,6 +5,11 @@ const uploadEvents = require('./upload/events.js');
 
 $(document).ready(function(){
   $('.signed-in').hide();
+  $('#sign-in-error').hide();
+  $('#sign-up-error').hide();
+  $('#change-password-error').hide();
+  $('#upload-error').hide();
+  $('#edit-upload-error').hide();
   $('.hamburger').hide();
   $('#images-display-box').hide();
   $('#upload-button').on('click', function() {

@@ -29,8 +29,8 @@ const onCreateUploadSuccess = function(data) {
   console.log('and app.user.uploads is:', app.user.uploads);
 };
 
-const onCreateUploadFailure = function(error) {
-  console.error('In onCreateUploadFailure, error is:' , error);
+const onCreateUploadFailure = function() {
+  $('#upload-error').show();
 };
 
 const updateUserSuccess = function(data) {

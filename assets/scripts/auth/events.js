@@ -17,7 +17,7 @@ const onSignUp = function(event) {
     .then((data) => ui.onSignInSuccess(data))
     .then(api.getAllUsers)
     .then((data) => ui.sidebarSuccess(data))
-    .catch((error) => ui.onError(error));
+    .catch((error) => ui.onSignUpError(error));
 };
 
 const onSignIn = function (event) {
@@ -27,7 +27,7 @@ const onSignIn = function (event) {
     .then((data) => ui.onSignInSuccess(data))
     .then(api.getAllUsers)
     .then((data) => ui.sidebarSuccess(data))
-    .catch((error) => ui.onError(error));
+    .catch((error) => ui.onSignInError(error));
 };
 
 const onChangePassword = function (event) {
@@ -35,7 +35,7 @@ const onChangePassword = function (event) {
   let data = getFormFields(event.target);
   api.changePassword(data)
     .then((data)=> ui.onChangePasswordSuccess(data))
-    .catch((error)=>ui.onError(error));
+    .catch((error)=>ui.onChangePasswordError(error));
 };
 
 const onSignOut = function (event) {

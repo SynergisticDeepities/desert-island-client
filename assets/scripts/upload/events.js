@@ -35,7 +35,7 @@ const onEditUpload = function(event){
   .then(api.getUser)
   .then((data) => ui.updateUserSuccess(data))
   .then(ui.onThumbnailUpdateSuccess)
-  .catch((error) => ui.onError(error));
+  .catch((error) => ui.onEditUploadError(error));
 };
 
 const viewUserIsland = function(event){
