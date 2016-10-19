@@ -8,6 +8,7 @@ $(document).ready(function(){
   $('#sign-in-error').hide();
   $('#sign-up-error').hide();
   $('#change-password-error').hide();
+  $('#upload-error').hide();
   $('.hamburger').hide();
   $('#images-display-box').hide();
   $('#upload-button').on('click', function() {

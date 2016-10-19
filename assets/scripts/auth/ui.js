@@ -56,6 +56,7 @@ const signOutSuccess = function () {
   $('#sign-up-error').hide();
   $('#sign-in-error').hide();
   $('#change-password-error').hide();
+  $('#upload-error').hide();
   $('#images-display-box .row').html('');
   $('#images-display-box').hide();
   $('.hamburger').hide();

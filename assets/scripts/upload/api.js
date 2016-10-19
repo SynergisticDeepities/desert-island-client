@@ -16,8 +16,12 @@ const createUpload = function (data) {
       success(data) {
         resolve(data);
       },
-      failure (jqxhr) {
-        reject(jqxhr);
+      error(jqxhr, textStatus, errorThrown) {
+        reject({
+          jqxhr: jqxhr,
+          textStatus: textStatus,
+          errorThrown: errorThrown
+        });
       }
     });
   });
