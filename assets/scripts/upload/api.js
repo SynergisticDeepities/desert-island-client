@@ -40,8 +40,12 @@ const deleteUpload = function (id) {
       success(data) {
         resolve(data);
       },
-      failure (jqxhr) {
-        reject(jqxhr);
+      error(jqxhr, textStatus, errorThrown) {
+        reject({
+          jqxhr: jqxhr,
+          textStatus: textStatus,
+          errorThrown: errorThrown
+        });
       }
     });
   });
@@ -59,8 +63,12 @@ const editUpload = function(data, imageId) {
       success(data) {
         resolve(data);
       },
-      failure (jqxhr) {
-        reject(jqxhr);
+      error(jqxhr, textStatus, errorThrown) {
+        reject({
+          jqxhr: jqxhr,
+          textStatus: textStatus,
+          errorThrown: errorThrown
+        });
       }
     });
   });
@@ -80,8 +88,12 @@ const getUser = function() {
       success(data) {
         resolve(data);
       },
-      failure (jqxhr) {
-        reject(jqxhr);
+      error(jqxhr, textStatus, errorThrown) {
+        reject({
+          jqxhr: jqxhr,
+          textStatus: textStatus,
+          errorThrown: errorThrown
+        });
       }
     });
   });
@@ -100,8 +112,12 @@ const getOtherUser = function(id) {
       success(data) {
         resolve(data);
       },
-      failure (jqxhr) {
-        reject(jqxhr);
+      error(jqxhr, textStatus, errorThrown) {
+        reject({
+          jqxhr: jqxhr,
+          textStatus: textStatus,
+          errorThrown: errorThrown
+        });
       }
     });
   });
