@@ -3,6 +3,7 @@
 const app = require('../../scripts/app');
 const displayImageThumbnails = require('../templates/display-images.handlebars');
 const otherUserThumbnailUpdate = require('../templates/show-other-user-thumbnails.handlebars');
+const displayNameHeader = require('../templates/display-name.handlebars');
 
 const onUploadButtonClick = function() {
   $('#upload-button').on('click', function() {
@@ -34,12 +35,14 @@ const onCreateUploadFailure = function(error) {
 
 const updateUserSuccess = function(data) {
   app.user.uploads = data.user.uploads;
+  $('header h1').html(displayNameHeader(app.user));
   console.log('in updateUserSuccess, data is:', data);
   console.log('in updateUserSuccess, app.user is:', app.user);
 };
 
 const updateOtherUserSuccess = function(data) {
   app.otherUser = data.user;
+  $('header h1').html(displayNameHeader(app.otherUser));
   $('#upload-button').hide();
 };
 
