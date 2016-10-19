@@ -60,14 +60,14 @@
                 <strong>Whoops!</strong> Something went wrong.
               </div>
               <form id="sign-up-form" class="sign-up">
-                <input name="credentials[userName]" type="text" placeholder="Username">
+                <input name="credentials[userName]" type="text" maxlength=20 placeholder="Username">
                 <input name="credentials[email]" type="text" placeholder="email"
                 onfocus="this.placeholder =''"value="">
                 <input name="credentials[password]" type="password"
-                placeholder="password" onfocus="this.placeholder =''"
+                placeholder="password" maxlength=20 onfocus="this.placeholder =''"
                   value="">
                 <input name="credentials[password_confirmation]" type="password"
-                placeholder="confirm password" onfocus="this.placeholder =''"
+                placeholder="confirm password" maxlength=20 onfocus="this.placeholder =''"
                   value="">
                 <input type="Submit" value="Sign Up!">
               </form>
@@ -117,7 +117,7 @@
               <input name="passwords[old]" type="password"
               placeholder="old password" onfocus="this.placeholder =''" value="">
               <input name="passwords[new]" type="password" placeholder="new password"
-              onfocus="this.placeholder =''" value="">
+              onfocus="this.placeholder =''" maxlength=20 value="">
               <input type="Submit" value="Change password">
             </form>
           </div>
@@ -138,9 +138,9 @@
               <strong>Whoops!</strong> Please make sure you're uploading an image file no larger than 10 MB and that you have fewer than 5 photos!
             </div>
             <form id="multipart-form-data" class="upload" enctype="multipart/form-data">
-              <input name="upload[title]" type="text" placeholder="Picture title">
+              <input name="upload[title]" type="text" placeholder="Picture title" maxlength=20 >
               <br />
-              <input name="upload[description]" type="text" placeholder="Picture Description">
+              <input name="upload[description]" type="text" style="width: 250px; height: 80px"placeholder="Picture Description" maxlength=40 >
               <br />
               <input name="upload[file]" type="file" accept="image/*" placeholder="Choose File..."
               onfocus="this.placeholder =''" value="">
@@ -165,9 +165,9 @@
               <strong>Whoops!</strong> Your title or description length might be too long!
             </div>
             <form id="edit-form" class="edit">
-              <input name="upload[title]" type="text" placeholder="Picture title">
+              <input name="upload[title]" type="text" maxlength=20 placeholder="Picture title">
               <br />
-              <input name="upload[description]" type="text" placeholder="Picture Description">
+              <input name="upload[description]" type="text" maxlength=40 style="width: 250px; height: 80px" placeholder="Picture Description">
               <br />
               <input type="submit" name="submit" value="Update" class="btn btn-default">
             </form>
