@@ -16,6 +16,7 @@ const onSignInSuccess = function (data) {
     console.log(data);
     app.user = data.user;
     $('#signInModal').modal('hide');
+    $('#signUpModal').modal('hide');
     $('.signed-out').hide();
     $('#description-div').hide();
     $('.signed-in').show();
