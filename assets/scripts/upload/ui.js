@@ -2,6 +2,7 @@
 
 const app = require('../../scripts/app');
 const displayImageThumbnails = require('../templates/display-images.handlebars');
+const otherUserThumbnailUpdate = require('../templates/show-other-user-thumbnails.handlebars');
 
 const onUploadButtonClick = function() {
   $('#upload-button').on('click', function() {
@@ -37,6 +38,11 @@ const updateUserSuccess = function(data) {
   console.log('in updateUserSuccess, app.user is:', app.user);
 };
 
+const updateOtherUserSuccess = function(data) {
+  app.otherUser = data.user;
+  $('#upload-button').hide();
+};
+
 const updateUserFailure = function(error) {
   console.error(error);
 };
@@ -50,9 +56,18 @@ const onDeleteUploadFailure = function(error) {
   console.log(error);
 };
 
-const onUpdateSuccess = function(){
-$('#images-display-box .row').html(displayImageThumbnails(app.user));
-$('#editModal').modal('hide');
+const onThumbnailUpdateSuccess = function(){
+  $('#images-display-box .row').html(displayImageThumbnails(app.user));
+  $('#editModal').modal('hide');
+};
+
+const onUpdateOtherUserThumbnailSuccess = function(){
+  $('#images-display-box .row').html(otherUserThumbnailUpdate(app.otherUser));
+  $('#editModal').modal('hide');
+};
+
+const onError = function(){
+  console.log("Sorry, there was an error");
 };
 
 module.exports = {
@@ -64,5 +79,8 @@ module.exports = {
   updateUserFailure,
   onDeleteUploadSuccess,
   onDeleteUploadFailure,
-  onUpdateSuccess
+  onThumbnailUpdateSuccess,
+  updateOtherUserSuccess,
+  onUpdateOtherUserThumbnailSuccess,
+  onError,
 };

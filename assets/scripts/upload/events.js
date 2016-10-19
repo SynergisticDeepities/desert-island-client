@@ -34,7 +34,7 @@ const onEditUpload = function(event){
   api.editUpload(data,imageId)
   .then(api.getUser)
   .then((data) => ui.updateUserSuccess(data))
-  .then(ui.onUpdateSuccess)
+  .then(ui.onUpdateThumbnailSuccess)
   .catch((error) => ui.onError(error));
 
 };
@@ -52,13 +52,13 @@ const viewUserIsland = function(event){
   if (isOwner) {
     api.getUser()
     .then((data) => ui.updateUserSuccess(data))
-    .then(ui.onUpdateSuccess)
+    .then(ui.onThumbnailUpdateSuccess)
     .catch((error) => ui.onError(error));
   } else {
     // need to render a more limited view state (no upload, edit, delete)
     api.getOtherUser(id)
-    .then((data) => ui.updateUserSuccess(data))
-    .then(ui.onUpdateSuccess)
+    .then((data) => ui.updateOtherUserSuccess(data))
+    .then(ui.onUpdateOtherUserThumbnailSuccess)
     .catch((error) => ui.onError(error));
   }
 
