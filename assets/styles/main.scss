@@ -15,14 +15,14 @@ header,
 footer,
 .description,
 .signed-out,
-.signed-in:not(.upload-button),
+.signed-in,
 .navbar,
 .images-display {
   margin: 0 auto;
 }
 
 .description,
-.navbar .signed-out,
+.signed-out,
 .col-xs-1,
 .col-xs-2,
 .col-xs-3,
@@ -48,14 +48,14 @@ header,
 }
 
 .signed-out,
-.signed-in {
+.signed-in:not(.this-upload-button) {
   box-shadow: 5px 5px 0 0 $black,
               5px 5px 0 0 $black;
   height: 50px;
   width: 200px;
 }
 
-header .signed-in {
+header .signed-in:not(.this-upload-button){
   font-size: 10px;
   height: 25px;
   text-align: center;
@@ -119,4 +119,8 @@ footer {
 
 .images-display {
   height: 500px;
+}
+
+.navbar .signed-in {
+  float: left;
 }
