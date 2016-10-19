@@ -38,16 +38,6 @@ header,
 }
 
 .signed-out,
-.signed-in,
-.col-xs-1,
-.col-xs-2,
-.col-xs-3,
-.col-xs-6,
-.upload-view-button {
-  // border: 1px solid $black;
-}
-
-.signed-out,
 .signed-in:not(.this-upload-button) {
   box-shadow: 5px 5px 0 0 $black,
               5px 5px 0 0 $black;
@@ -55,23 +45,22 @@ header,
   width: 200px;
 }
 
-header .signed-in:not(.this-upload-button){
-  font-size: 10px;
-  height: 25px;
-  text-align: center;
-  width: 150px;
-}
-
-header .nav-pills {
-  margin-bottom: 5px;
-  width: 315px;
-}
-
-
 header {
   margin-top: 50px;
   position: relative;
   width: 70%;
+
+  .signed-in:not(.this-upload-button) {
+    font-size: 10px;
+    height: 25px;
+    text-align: center;
+    width: 150px;
+  }
+
+  .nav-pills {
+    margin-bottom: 5px;
+    width: 315px;
+  }
 }
 
 .description {
@@ -80,6 +69,10 @@ header {
 
 .navbar {
   width: 15%;
+
+  .signed-in {
+    float: left;
+  }
 }
 
 .nav-pills {
@@ -121,6 +114,7 @@ footer {
   height: 500px;
 }
 
-.navbar .signed-in {
-  float: left;
+.nav > li > a {
+  display: auto;
+  padding: 0;
 }
