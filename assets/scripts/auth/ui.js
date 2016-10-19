@@ -51,12 +51,17 @@ const onChangePasswordError = function () {
   $('#change-password-error').show();
 };
 
+const onEditUploadError = function () {
+  $('#edit-upload-error').show();
+};
+
 const signOutSuccess = function () {
   $('.signed-in').hide();
   $('#sign-up-error').hide();
   $('#sign-in-error').hide();
   $('#change-password-error').hide();
   $('#upload-error').hide();
+  $('#edit-upload-error').hide();
   $('#images-display-box .row').html('');
   $('#images-display-box').hide();
   $('.hamburger').hide();
