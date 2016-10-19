@@ -35,8 +35,8 @@ const onChangePasswordSuccess = function(){
   $('#changePasswordModal').modal('hide');
 };
 
-const onError = function () {
-  $('#change-password-error').show();
+const onError = function (error) {
+  console.error(error)
 };
 
 const onSignUpError = function () {
@@ -51,9 +51,9 @@ const onChangePasswordError = function () {
   $('#change-password-error').show();
 };
 
-const onEditUploadError = function () {
-  $('#edit-upload-error').show();
-};
+// const onEditUploadError = function () {
+//   $('#edit-upload-error').show();
+// };
 
 const signOutSuccess = function () {
   $('.signed-in').hide();

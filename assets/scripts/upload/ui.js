@@ -11,12 +11,6 @@ const onUploadButtonClick = function() {
   });
 };
 
-const onUploadModalClick = function () {
-  $('#upload-file-form').on('submit', function() {
-    $('#uploadModal').modal('show');
-  });
-};
-
 const onCreateUploadSuccess = function(data) {
   let newUpload = data.upload;
   app.user.uploads.push(newUpload);
@@ -75,7 +69,6 @@ const onError = function(){
 };
 
 module.exports = {
-  onUploadModalClick,
   onUploadButtonClick,
   onCreateUploadSuccess,
   onCreateUploadFailure,

@@ -13,16 +13,19 @@ $(document).ready(function(){
   $('.hamburger').hide();
   $('#images-display-box').hide();
   $('#upload-button').on('click', function() {
+    $('#upload-error').hide();
     $('#uploadModal').modal('show');
   });
   $('#sign-out').hide();
   // $('#change-password').hide();
   $('#sign-up-button').on('click', function(){
+    $('#sign-up-error').hide();
     $('#signUpModal').modal('show');
   });
   $('#sign-up-form').on('submit', authEvents.onSignUp);
 
   $('#sign-in-button').on('click', function(){
+    $('#sign-in-error').hide();
     $('#signInModal').modal('show');
   });
   $('#sign-in-form').on('submit', authEvents.onSignIn);
@@ -30,6 +33,7 @@ $(document).ready(function(){
 
   $('#change-password-button').on('click', function(){
     $('#changePasswordModal').modal('show');
+    $('#change-password-error').hide();
     $('#sign-out-button').show();
     $('.signed-out').hide();
   });
