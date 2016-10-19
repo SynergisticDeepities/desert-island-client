@@ -3,7 +3,7 @@
  const api = require('./api');
  const ui = require('./ui');
  const getFormFields = require('../../../lib/get-form-fields');
-// const app = require('../app.js');
+const app = require('../app.js');
 
 
 const onCreateUpload = function(event) {
@@ -39,6 +39,36 @@ const onEditUpload = function(event){
 
 };
 
+const viewUserIsland = function(event){
+  event.preventDefault();
+
+  let id = event.target.id;
+
+  let isOwner = (id === app.user._id);
+
+  console.log('in viewUserIsland, event.target.id is', event.target.id);
+  console.log('in viewUserIsland, isOwner is', isOwner);
+
+  if (isOwner) {
+    api.getUser()
+    .then((data) => ui.updateUserSuccess(data))
+    .then(ui.onUpdateSuccess)
+    .catch((error) => ui.onError(error));
+  } else {
+    // need to render a more limited view state (no upload, edit, delete)
+    api.getOtherUser(id)
+    .then((data) => ui.updateUserSuccess(data))
+    .then(ui.onUpdateSuccess)
+    .catch((error) => ui.onError(error));
+  }
+
+};
+
+const addSidebarHandlers = function(){
+  $('#sidebar').on('click', '.user-link', viewUserIsland);
+
+
+};
 
 
 
@@ -46,5 +76,6 @@ const onEditUpload = function(event){
 module.exports = {
   onCreateUpload,
   onDeleteUpload,
-  onEditUpload
+  onEditUpload,
+  addSidebarHandlers,
 };

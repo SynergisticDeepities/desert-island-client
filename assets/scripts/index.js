@@ -70,5 +70,7 @@ $(document).ready(function(){
     $('#wrapper').toggleClass('toggled');
   });
 
+  uploadEvents.addSidebarHandlers();
+
 
 });
