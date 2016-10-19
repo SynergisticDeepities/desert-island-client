@@ -36,6 +36,7 @@ const onCreateUploadFailure = function(error) {
 const updateUserSuccess = function(data) {
   app.user.uploads = data.user.uploads;
   $('header h1').html(displayNameHeader(app.user));
+  $('#upload-button').show();
   console.log('in updateUserSuccess, data is:', data);
   console.log('in updateUserSuccess, app.user is:', app.user);
 };
