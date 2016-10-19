@@ -1,0 +1,11 @@
+{{#each uploads}}
+<div class="col-xs-2">
+  <div class="thumbnail">
+    <a href = {{this.location}}><img src={{this.location}}></a>
+    <div class="caption">
+      <h5>{{this.title}}</h5>
+      <p>{{this.description}}</p>
+    </div>
+  </div>
+  </div>
+{{/each}}

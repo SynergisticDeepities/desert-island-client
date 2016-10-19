@@ -19,6 +19,7 @@ const onSignInSuccess = function (data) {
     $('#signUpModal').modal('hide');
     $('.signed-out').hide();
     $('#description-div').hide();
+    $('.hamburger').show();
     $('.signed-in').show();
     $('.navbar').css('float', 'left');
     $('.navbar').css('margin-left', '250px');
@@ -42,6 +43,7 @@ const signOutSuccess = function () {
   $('.signed-in').hide();
   $('#images-display-box .row').html('');
   $('#images-display-box').hide();
+  $('.hamburger').hide();
   $('.signed-out').show();
   $('#description-div').show();
   $('.navbar').css('float', 'none');
