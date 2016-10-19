@@ -27,7 +27,7 @@ const onSignIn = function (event) {
     .then((data) => ui.onSignInSuccess(data))
     .then(api.getAllUsers)
     .then((data) => ui.sidebarSuccess(data))
-    .catch((error) => ui.onError(error));
+    .catch((error) => ui.onSignInError(error));
 };
 
 const onChangePassword = function (event) {

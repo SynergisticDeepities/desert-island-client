@@ -43,6 +43,10 @@ const onSignUpError = function () {
   $('#sign-up-error').show();
 };
 
+const onSignInError = function () {
+  $('#sign-in-error').show();
+};
+
 const signOutSuccess = function () {
   $('.signed-in').hide();
   $('#sign-up-error').hide();
@@ -91,4 +95,5 @@ module.exports = {
   sidebarSuccess,
   sidebarFailure,
   onSignUpError,
+  onSignInError,
 };
