@@ -51,20 +51,19 @@ header,
   padding: 5px;
  }
 
- .signed-out,
- .signed-in,
- .upload-view,
- .col-xs-1,
- .col-xs-2,
- .col-xs-3,
- .col-xs-6,
- .upload-view-button,
- .images-display,
- .thumbnail-top,
- .thumbnail-bottom {
-   border: 1px solid $black;
-
- }
+.signed-out,
+.signed-in,
+.upload-view,
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-6,
+.upload-view-button,
+.images-display,
+.thumbnail-top,
+.thumbnail-bottom {
+  border: 1px solid $black;
+}
 
 .signed-out,
 .signed-in {
@@ -73,6 +72,19 @@ header,
   height: 50px;
   width: 200px;
 }
+
+header .signed-in {
+  font-size: 10px;
+  height: 25px;
+  text-align: center;
+  width: 150px;
+}
+
+header .nav-pills {
+  margin-bottom: 5px;
+  width: 315px;
+}
+
 
 header {
   margin-top: 50px;
@@ -90,6 +102,8 @@ header {
 
 .nav-pills {
   float: right;
+  height: 25px;
+  width: 75px;
 }
 
 .upload-view {
