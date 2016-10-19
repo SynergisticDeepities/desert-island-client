@@ -34,7 +34,7 @@ const onEditUpload = function(event){
   api.editUpload(data,imageId)
   .then(api.getUser)
   .then((data) => ui.updateUserSuccess(data))
-  .then(ui.onUpdateThumbnailSuccess)
+  .then(ui.onThumbnailUpdateSuccess)
   .catch((error) => ui.onError(error));
 };
 
