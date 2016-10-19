@@ -16,11 +16,15 @@ const onSignInSuccess = function (data) {
     app.user = data.user;
     $('#signInModal').modal('hide');
     $('.signed-out').hide();
+    $('#description-div').hide();
     $('.signed-in').show();
+    $('.navbar').css('float', 'left');
+    $('.navbar').css('margin-left', '250px');
+    $('.navbar').css('margin-top', '25px');
+    $('.navbar').css('margin-right', '-125px');
     $('#images-display-box').show();
     $('header h1').html(displayNameHeader(app.user));
     $('#images-display-box .row').append(displayImageThumbnails(app.user));
-    // debugger;
 };
 
 const onChangePasswordSuccess = function(){
@@ -36,6 +40,9 @@ const signOutSuccess = function () {
   $('#images-display-box .row').html('');
   $('#images-display-box').hide();
   $('.signed-out').show();
+  $('#description-div').show();
+  $('.navbar').css('float', 'none');
+  $('.navbar').css('margin', '0 auto');
   app.user = null;
 };
 

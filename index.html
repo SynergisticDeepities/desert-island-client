@@ -11,8 +11,8 @@
       <header class="clearfix">
         <h1>Desert Island</h1>
         <ul class="nav nav-pills">
-          <li role="presentation" class="signed-in btn btn-default navbar-btn" id="change-password-button"><a href="#">CHANGE PASSWORD</a></li>
-          <li role="presentation" class="signed-in btn btn-default navbar-btn" id="sign-out-button"><a href="#">SIGN OUT</a></li>
+          <li role="presentation" class="signed-in btn btn-default" id="change-password-button">CHANGE PASSWORD<a href="#"></a></li>
+          <li role="presentation" class="signed-in btn btn-default" id="sign-out-button">SIGN OUT<a href="#"></a></li>
         </ul>
       </header>
 
@@ -23,9 +23,8 @@
       </div>
     <nav class="navbar">
         <button type="button" id="sign-up-button" class="btn btn-default navbar-btn signed-out sign-up">SIGN UP</button>
-        <button type="button" id="upload-button" class="btn btn-default signed-in navbar-btn">UPLOAD</button>
+        <button type="button" id="upload-button" class="btn btn-default navbar-btn signed-in this-upload-button">UPLOAD</button>
         <button type="button" id="sign-in-button" class="btn btn-default navbar-btn signed-out sign-in">SIGN IN</button>
-        <button type="button" id="my-island-button" class="btn btn-default signed-in navbar-btn">MY ISLAND</button>
       </nav>
       <div class="modal fade" id="signUpModal" tabindex="-1" ole="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -104,7 +103,6 @@
           </div>
           <div class="modal-body">
             <form id="multipart-form-data" class="upload" enctype="multipart/form-data">
-              <!--  COME BACK TO THIS -->
               <input name="upload[title]" type="text" placeholder="Picture title">
               <br />
               <input name="upload[description]" type="text" placeholder="Picture Description">
@@ -129,7 +127,6 @@
           </div>
           <div class="modal-body">
             <form id="edit-form" class="edit">
-              <!--  COME BACK TO THIS -->
               <input name="upload[title]" type="text" placeholder="Picture title">
               <br />
               <input name="upload[description]" type="text" placeholder="Picture Description">
@@ -146,7 +143,6 @@
     <div id="images-display-box" class="images-display">
       <div class="row">
       </div>
-      <button id="share-button" class="share">Share</button>
     </div>
     </body>
 </html>
