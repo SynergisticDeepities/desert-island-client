@@ -11,8 +11,12 @@ const signUp = function(data) {
       success(data) {
         resolve(data);
       },
-      failure(jqxhr) {
-        reject(jqxhr);
+      error(jqxhr, textStatus, errorThrown) {
+        reject({
+          jqxhr: jqxhr,
+          textStatus: textStatus,
+          errorThrown: errorThrown
+        });
       }
     });
   });
@@ -27,8 +31,12 @@ const signIn = function(data) {
       success(data) {
         resolve(data);
       },
-      failure(jqxhr) {
-        reject(jqxhr);
+      error(jqxhr, textStatus, errorThrown) {
+        reject({
+          jqxhr: jqxhr,
+          textStatus: textStatus,
+          errorThrown: errorThrown
+        });
       }
     });
   });
@@ -48,8 +56,12 @@ const changePassword = function(data){
       success(data) {
         resolve(data);
       },
-      failure (jqxhr) {
-        reject(jqxhr);
+      error(jqxhr, textStatus, errorThrown) {
+        reject({
+          jqxhr: jqxhr,
+          textStatus: textStatus,
+          errorThrown: errorThrown
+        });
       }
     });
   });
@@ -66,8 +78,12 @@ const signOut = function() {
       success(data) {
         resolve(data);
       },
-      failure(jqxhr) {
-        reject(jqxhr)
+      error(jqxhr, textStatus, errorThrown) {
+        reject({
+          jqxhr: jqxhr,
+          textStatus: textStatus,
+          errorThrown: errorThrown
+        });
       }
     });
   });
@@ -84,8 +100,12 @@ const getAllUsers = function() {
       success(data) {
         resolve(data);
       },
-      failure(jqxhr) {
-        reject(jqxhr)
+      error(jqxhr, textStatus, errorThrown) {
+        reject({
+          jqxhr: jqxhr,
+          textStatus: textStatus,
+          errorThrown: errorThrown
+        });
       }
     });
   });
