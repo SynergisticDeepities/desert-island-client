@@ -17,7 +17,7 @@ const onSignUp = function(event) {
     .then((data) => ui.onSignInSuccess(data))
     .then(api.getAllUsers)
     .then((data) => ui.sidebarSuccess(data))
-    .catch((error) => ui.onError(error));
+    .catch((error) => ui.onSignUpError(error));
 };
 
 const onSignIn = function (event) {

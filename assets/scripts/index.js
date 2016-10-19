@@ -5,6 +5,7 @@ const uploadEvents = require('./upload/events.js');
 
 $(document).ready(function(){
   $('.signed-in').hide();
+  $('#sign-up-error').hide();
   $('.hamburger').hide();
   $('#images-display-box').hide();
   $('#upload-button').on('click', function() {

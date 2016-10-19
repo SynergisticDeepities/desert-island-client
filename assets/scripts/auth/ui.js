@@ -39,8 +39,13 @@ const onError = function () {
   console.log("Sorry, there was an error.");
 };
 
+const onSignUpError = function () {
+  $('#sign-up-error').show();
+};
+
 const signOutSuccess = function () {
   $('.signed-in').hide();
+  $('#sign-up-error').hide();
   $('#images-display-box .row').html('');
   $('#images-display-box').hide();
   $('.hamburger').hide();
@@ -84,5 +89,6 @@ module.exports = {
   signOutSuccess,
   onError,
   sidebarSuccess,
-  sidebarFailure
+  sidebarFailure,
+  onSignUpError,
 };
