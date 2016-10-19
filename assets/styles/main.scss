@@ -59,7 +59,6 @@ header,
 .col-xs-3,
 .col-xs-6,
 .upload-view-button,
-.images-display,
 .thumbnail-top,
 .thumbnail-bottom {
   border: 1px solid $black;
@@ -113,10 +112,26 @@ header {
 }
 
 .col-xs-1,
-.col-xs-2,
 .col-xs-3,
 .col-xs-6 {
   height: 50px;
+}
+
+.col-xs-2 {
+  height: 260px;
+  margin-left: 50px;
+  width: 175px;
+}
+
+.col-xs-2:nth-child(4){
+  clear: both;
+  margin-left: 165px;
+}
+
+.row {
+  margin: 0 auto;
+  padding-left: 100px;
+  width: 950px;
 }
 
 footer {

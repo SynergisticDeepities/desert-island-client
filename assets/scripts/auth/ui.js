@@ -16,11 +16,11 @@ const onSignInSuccess = function (data) {
     app.user = data.user;
     $('#signInModal').modal('hide');
     $('.signed-out').hide();
+    $('#description-div').hide();
     $('.signed-in').show();
     $('#images-display-box').show();
     $('header h1').html(displayNameHeader(app.user));
     $('#images-display-box .row').append(displayImageThumbnails(app.user));
-    // debugger;
 };
 
 const onChangePasswordSuccess = function(){
