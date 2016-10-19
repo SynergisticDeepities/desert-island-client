@@ -42,7 +42,6 @@ $(document).ready(function(){
 
 // added code from bootsnip for sidebar
   let trigger = $('.hamburger'),
-    links = $('.user-link'),
     overlay = $('.overlay'),
     isClosed = false;
 
