@@ -4,6 +4,21 @@ const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api');
 const ui = require('./ui');
 
+const logInViewState = function() {
+  $('.hamburger').hide();
+  $('#images-display-box').hide();
+  $('#sign-out').hide();
+};
+
+const hideErrors = function() {
+  $('.signed-in').hide();
+  $('#sign-in-error').hide();
+  $('#sign-up-error').hide();
+  $('#change-password-error').hide();
+  $('#upload-error').hide();
+  $('#edit-upload-error').hide();
+};
+
 const onSignUp = function(event) {
   event.preventDefault();
   let signUpData = getFormFields(event.target);
@@ -12,7 +27,6 @@ const onSignUp = function(event) {
       console.log('before auto sign-in, data is:', data);
       console.log('and signUpData is:', signUpData);
       return api.signIn(signUpData);
-      // return data;
     })
     .then((data) => ui.onSignInSuccess(data))
     .then(api.getAllUsers)
@@ -45,10 +59,19 @@ const onSignOut = function (event) {
     .catch((error)=>ui.onError(error));
 };
 
+const addHandlers = function() {
+  $('#sign-up-form').on('submit', onSignUp);
+  $('#sign-in-form').on('submit', onSignIn);
+  $('#sign-out-button').on('click', onSignOut);
+  $('#change-password-form').on('submit', onChangePassword);
+};
 
 module.exports = {
-  onSignUp,
-  onSignIn,
-  onChangePassword,
-  onSignOut
+  addHandlers,
+  logInViewState,
+  hideErrors
+  // onSignUp,
+  // onSignIn,
+  // onChangePassword,
+  // onSignOut
 };

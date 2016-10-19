@@ -63,18 +63,24 @@ const viewUserIsland = function(event){
 
 };
 
-const addSidebarHandlers = function(){
+const addHandlers = function() {
   $('#sidebar').on('click', '.user-link', viewUserIsland);
-
-
+  $('#multipart-form-data').on('submit', onCreateUpload);
+  $('#images-display-box .row').on('click', '.delete', onDeleteUpload);
+  $('#edit-form').on('submit', onEditUpload);
 };
+
+// const addSidebarHandlers = function(){
+//   $('#sidebar').on('click', '.user-link', viewUserIsland);
+// };
 
 
 
 
 module.exports = {
-  onCreateUpload,
-  onDeleteUpload,
-  onEditUpload,
-  addSidebarHandlers,
+  addHandlers
+  // onCreateUpload,
+  // onDeleteUpload,
+  // onEditUpload,
+  // addSidebarHandlers,
 };
