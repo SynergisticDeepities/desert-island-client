@@ -42,6 +42,7 @@ $(document).ready(function(){
 
 // added code from bootsnip for sidebar
   let trigger = $('.hamburger'),
+    links = $('.user-link'),
     overlay = $('.overlay'),
     isClosed = false;
 
@@ -64,13 +65,15 @@ $(document).ready(function(){
     hamburger_cross();
   });
 
-
-
   $('[data-toggle="offcanvas"]').click(function () {
     $('#wrapper').toggleClass('toggled');
   });
 
   uploadEvents.addSidebarHandlers();
 
+  $('#sidebar').on('click', '.user-link', (function () {
+    hamburger_cross();
+    $('#wrapper').toggleClass('toggled');
+  }));
 
 });
