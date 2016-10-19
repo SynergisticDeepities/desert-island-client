@@ -50,6 +50,7 @@ const signOutSuccess = function () {
   $('.navbar').css('margin', '0 auto');
   app.user = null;
   $('.sidebar-nav').html('');
+  $('header h1').html('Desert Island');
 };
 
 const sidebarSuccess = function (data) {
