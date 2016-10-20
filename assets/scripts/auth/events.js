@@ -24,8 +24,6 @@ const onSignUp = function(event) {
   let signUpData = getFormFields(event.target);
   api.signUp(signUpData)
     .then((data) => {
-      console.log('before auto sign-in, data is:', data);
-      console.log('and signUpData is:', signUpData);
       return api.signIn(signUpData);
     })
     .then((data) => ui.onSignInSuccess(data))

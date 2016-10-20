@@ -3,6 +3,12 @@ $gray: #a9a9a9;
 $green: #0f0;
 $white: #fff;
 
+body {
+  background-position: center;
+  background-size: 1400px;
+  min-width: 1400px;
+}
+
 .clearfix::after {
   clear: both;
   content: '';
@@ -14,7 +20,6 @@ $white: #fff;
 header,
 footer,
 .description,
-.signed-out,
 .signed-in,
 .navbar,
 .images-display {
@@ -45,6 +50,12 @@ header,
   width: 200px;
 }
 
+.signed-out {
+  clear: both;
+  float: left;
+  margin-left: 25px;
+}
+
 header {
   margin-top: 10px;
   position: relative;
@@ -67,12 +78,10 @@ header {
   width: 60%;
 }
 
-.navbar {
-  width: 15%;
 
-  .signed-in {
-    float: left;
-  }
+.navbar:first-of-type {
+  clear: both;
+  float: left;
 }
 
 .nav-pills {

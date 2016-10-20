@@ -7,13 +7,11 @@ const populateSidebar = require('../templates/populate_sidebar.handlebars');
 
 const onSignUpSuccess = function (data) {
   if (data) {
-    console.log(data);
     $('#signUpModal').modal('hide');
   }
 };
 
 const onSignInSuccess = function (data) {
-    console.log(data);
     app.user = data.user;
     $('#signInModal').modal('hide');
     $('#signUpModal').modal('hide');
@@ -36,7 +34,7 @@ const onChangePasswordSuccess = function(){
 };
 
 const onError = function (error) {
-  console.error(error)
+  console.error(error);
 };
 
 const onSignUpError = function () {
@@ -75,10 +73,7 @@ const signOutSuccess = function () {
 };
 
 const sidebarSuccess = function (data) {
-  console.log(data);
   app.users = data.users;
-  // debugger;
-
   app.users.forEach((user) => {
     if (user._id === app.user._id) {
       user.isOwner = true;
@@ -86,10 +81,6 @@ const sidebarSuccess = function (data) {
       user.isOwner = false;
     }
   });
-
-  console.log('after assigning isOwner properties, app.users is:', app.users);
-
-  // console.log('inside sidebarSuccess, app.users is:', app.users);
   $('.sidebar-nav').append(populateSidebar(app));
 };
 
