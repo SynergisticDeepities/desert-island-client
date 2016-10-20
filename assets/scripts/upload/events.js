@@ -8,8 +8,6 @@ const app = require('../app.js');
 
 const onCreateUpload = function(event) {
   event.preventDefault();
-
-  console.log("In events");
   let data = new FormData(event.target);
   api.createUpload(data)
     .then((data) => ui.onCreateUploadSuccess(data))
@@ -30,7 +28,6 @@ const onEditUpload = function(event){
   event.preventDefault();
   let data = getFormFields(event.target);
   let imageId = $(event.target).attr('class');
-  console.log(imageId);
   api.editUpload(data,imageId)
   .then(api.getUser)
   .then((data) => ui.updateUserSuccess(data))
@@ -44,9 +41,6 @@ const viewUserIsland = function(event){
   let id = event.target.id;
 
   let isOwner = (id === app.user._id);
-
-  console.log('in viewUserIsland, event.target.id is', event.target.id);
-  console.log('in viewUserIsland, isOwner is', isOwner);
 
   if (isOwner) {
     api.getUser()

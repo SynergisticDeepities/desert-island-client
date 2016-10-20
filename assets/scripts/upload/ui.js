@@ -18,9 +18,6 @@ const onCreateUploadSuccess = function(data) {
   $('#description-div').hide();
   $('#images-display-box').show();
   $('#images-display-box .row').html(displayImageThumbnails(app.user));
-
-  console.log('In onCreateUploadSuccess, data is:' , data);
-  console.log('and app.user.uploads is:', app.user.uploads);
 };
 
 const onCreateUploadFailure = function() {
@@ -31,8 +28,6 @@ const updateUserSuccess = function(data) {
   app.user.uploads = data.user.uploads;
   $('header h1').html(displayNameHeader(app.user));
   $('#upload-button').show();
-  console.log('in updateUserSuccess, data is:', data);
-  console.log('in updateUserSuccess, app.user is:', app.user);
 };
 
 const updateOtherUserSuccess = function(data) {
@@ -46,12 +41,11 @@ const updateUserFailure = function(error) {
 };
 
 const onDeleteUploadSuccess = function() {
-  console.log('in onDeleteUploadSuccess!');
   $('#images-display-box .row').html(displayImageThumbnails(app.user));
 };
 
 const onDeleteUploadFailure = function(error) {
-  console.log(error);
+  console.error(error);
 };
 
 const onThumbnailUpdateSuccess = function(){
@@ -64,8 +58,8 @@ const onUpdateOtherUserThumbnailSuccess = function(){
   $('#editModal').modal('hide');
 };
 
-const onError = function(){
-  console.log("Sorry, there was an error");
+const onError = function(error){
+  console.error(error);
 };
 
 module.exports = {
