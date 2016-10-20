@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Wendy+One');
+
+$wendy: 'Wendy One', sans-serif;
+
+$canary-yellow: #fff63b;
+$orangish: #FFB415;
+$black: rgba(0,0,0,1);
+
+// gives a transparent white
+@function white($opacity) {
+  @return rgba(255, 255, 255, $opacity)
+};
+
+
+// gives a transparent black
+@function black($opacity) {
+  @return rgba(0, 0, 0, $opacity)
+};
+
+@function shade($color, $percentage) {
+  @return mix($black, $color, $percentage)
+};
+
+
+@mixin text-shadow($opacity) {
+  text-shadow: black($opacity) 0 1px 0;
+}
+
+@mixin bold-text-shadow($opacity) {
+  text-shadow: black($opacity) 2px 3px 0;
+}
+
+@mixin background-black($opacity) {
+  background-color: black($opacity);
+}
+
+body {
+  background: url('../../imgs/island-pic-translucent.jpg') no-repeat fixed;
+  background-size: cover;
+}
+
+header {
+  width: 20%;
+}
+
+header,
+.description {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: $wendy;
+  color: $canary-yellow;
+}
+
+h1 {
+  @include bold-text-shadow(100%);
+  font-size: 4em;
+}

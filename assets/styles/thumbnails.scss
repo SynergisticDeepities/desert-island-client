@@ -1,0 +1,35 @@
+@function shade($color, $percentage) {
+  @return mix($black, $color, $percentage)
+};
+
+$hover-button: shade(#FF5D4F, 10%);
+
+.thumbnail {
+  width: 200px;
+  min-height: 200px;
+  max-height: 300px;
+  margin-bottom: 50px;
+
+  a img {
+    min-height: 75px;
+    max-height: 180px;
+    min-width: 75px;
+    max-width: 180px;
+  }
+}
+
+#upload-button {
+  margin-left: 200%;
+  height: 70px;
+  width: 200px;
+  margin-bottom: 75px;
+  background-color: #FF5D4F;
+  color: $canary-yellow;
+  font-family: $wendy;
+  font-size: 36px;
+  font-weight: 800;
+
+  &:hover{
+    background-color: $hover-button;
+  }
+}
