@@ -29,6 +29,9 @@ As a user, I want to be able to:
   * Download other people's files
 
 [Link to Wireframes](https://drive.google.com/file/d/0B1tPaUXMBTnjRjhzMFpUZnVtczg/view)
+||
+[Link to ERD](https://drive.google.com/open?id=0B9qM-5IxeHjzR1F5MW1wUzNnS0E)
+
 
 *Desert Island* was developed with a simple goal in mind: to deploy a client and API capable
 of uploading files to AWS and displaying them for users to interact with.
