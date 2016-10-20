@@ -49,9 +49,6 @@ const onChangePasswordError = function () {
   $('#change-password-error').show();
 };
 
-// const onEditUploadError = function () {
-//   $('#edit-upload-error').show();
-// };
 
 const signOutSuccess = function () {
   $('.signed-in').hide();

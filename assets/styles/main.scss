@@ -21,6 +21,7 @@ header,
 footer,
 .description,
 .signed-in,
+.signed-out,
 .navbar,
 .images-display {
   margin: 0 auto;
@@ -50,10 +51,8 @@ header,
   width: 200px;
 }
 
-.signed-out {
-  clear: both;
-  float: left;
-  margin-left: 25px;
+.navbar {
+  width: 15%;
 }
 
 header {
@@ -78,11 +77,6 @@ header {
   width: 60%;
 }
 
-
-.navbar:first-of-type {
-  clear: both;
-  float: left;
-}
 
 .nav-pills {
   float: right;
