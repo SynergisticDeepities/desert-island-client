@@ -46,9 +46,9 @@ header,
 }
 
 header {
-  margin-top: 50px;
+  margin-top: 10px;
   position: relative;
-  width: 70%;
+  width: 50%;
 
   .signed-in:not(.this-upload-button) {
     font-size: 10px;
@@ -90,6 +90,7 @@ header {
 .col-xs-2 {
   height: 260px;
   margin-left: 50px;
+  margin-top: 75px;
   width: 175px;
 }
 
@@ -112,6 +113,7 @@ footer {
 
 .images-display {
   height: 500px;
+  margin-top: 50px;
 }
 
 .nav > li > a {
